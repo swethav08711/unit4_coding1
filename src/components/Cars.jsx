@@ -45,9 +45,15 @@ export default function Cars() {
         <button onClick={handleData}>Show Orders</button>
         <OrdersPage data={order}>Show order</OrdersPage>
       </div>
-      <div style={{ display: "flex" }}>
+      <div>
         {data.map(res => (
-          <div style={{ border: "1px solid black", width: "40%" }}>
+          <div
+            style={{
+              border: "1px solid black",
+              width: "40%",
+              marginLeft: "300px",
+            }}
+          >
             <h1>Name: {res.name}</h1>
             <h1>Type: {res.type}</h1>
             <h1>Year: {res.Year}</h1>

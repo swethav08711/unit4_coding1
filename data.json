@@ -241,30 +241,5 @@
       "image": "https://imgd.aeplcdn.com/0x0/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg"
     }
   ],
-  "orders": [
-    {
-      "id": 1,
-      "name": "Baumbach-Hermann",
-      "type": "Rosana Dubery",
-      "Year": 1812,
-      "price": 196331,
-      "image": "https://imgd.aeplcdn.com/0x0/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg"
-    },
-    {
-      "id": 6,
-      "name": "Jast and Sons",
-      "type": "Ewart Ashling",
-      "Year": 1825,
-      "price": 103189,
-      "image": "https://imgd.aeplcdn.com/0x0/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg"
-    },
-    {
-      "id": 8,
-      "name": "Watsica, Hoeger and Langosh",
-      "type": "Olvan Anselmi",
-      "Year": 1851,
-      "price": 195122,
-      "image": "https://imgd.aeplcdn.com/0x0/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg"
-    }
-  ]
+  "orders": []
 }
