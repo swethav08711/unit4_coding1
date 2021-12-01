@@ -10,7 +10,6 @@ export default function OrdersPage({ data }) {
 
   return (
     <div>
-      <h1>Selected List</h1>
       {data.map(res => (
         <div style={{ border: "1px solid black", width: "40%" }}>
           <h1>Name: {res.name}</h1>
