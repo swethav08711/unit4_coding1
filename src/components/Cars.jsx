@@ -45,25 +45,26 @@ export default function Cars() {
         <button onClick={handleData}>Show Orders</button>
         <OrdersPage data={order}>Show order</OrdersPage>
       </div>
-
-      {data.map(res => (
-        <div style={{ border: "1px solid black", width: "40%" }}>
-          <h1>Name: {res.name}</h1>
-          <h1>Type: {res.type}</h1>
-          <h1>Year: {res.Year}</h1>
-          <h1>Price: {res.price}</h1>
-          <img style={{ width: "40%" }} src={res.image} alt="car" />
-          <button
-            onClick={() => {
-              axios.post("http://localhost:2021/orders", res).then(() => {
-                setOrder()
-              })
-            }}
-          >
-            Buy Now!
-          </button>
-        </div>
-      ))}
+      <div style={{ display: "flex" }}>
+        {data.map(res => (
+          <div style={{ border: "1px solid black", width: "40%" }}>
+            <h1>Name: {res.name}</h1>
+            <h1>Type: {res.type}</h1>
+            <h1>Year: {res.Year}</h1>
+            <h1>Price: {res.price}</h1>
+            <img style={{ width: "40%" }} src={res.image} alt="car" />
+            <button
+              onClick={() => {
+                axios.post("http://localhost:2021/orders", res).then(() => {
+                  setOrder()
+                })
+              }}
+            >
+              Buy Now!
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

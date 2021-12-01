@@ -1,13 +1,12 @@
 import React from "react"
+import Popup from "./Formdata"
 
 export default function OrdersPage({ data }) {
-  const handleForm = () => (
-    <div>
-      <input type="text" placeholder="name" />
-      <input type="number" placeholder="Phone Number" />
-      <input type="time" />
-    </div>
-  )
+  const [isOpen, setIsOpen] = React.useState(false)
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
     <div>
@@ -18,9 +17,24 @@ export default function OrdersPage({ data }) {
           <h1>Year: {res.Year}</h1>
           <h1>Price: {res.price}</h1>
           <img style={{ width: "40%" }} src={res.image} alt="car" />
-          <button onClick={handleForm}>Order Now</button>
+          {/* <input type="button" value="Buy Now!" onClick={togglePopup} /> */}
+          <button onClick={togglePopup}>Buy Now</button>
         </div>
       ))}
+      {isOpen && (
+        <Popup
+          content={
+            <div>
+              <input type="text" placeholder="name" />
+              <input type="number" placeholder="Phone Number" />
+              <button onClick={() => alert("Order Placed Sucessfully")}>
+                Submit
+              </button>
+            </div>
+          }
+          handleClose={togglePopup}
+        />
+      )}
     </div>
   )
 }

@@ -1,15 +1,16 @@
 import React from "react"
-
-export default function Formdata() {
-  console.log("hello")
+import styles from "./Form.module.css"
+const Popup = props => {
   return (
-    <div>
-      <h1>Hello</h1>
-      <div>
-        <input type="text" placeholder="name" />
-        <input type="number" placeholder="Phone Number" />
-        <input type="time" />
+    <div className={styles.popup_box}>
+      <div className={styles.box}>
+        <span className={styles.close_icon} onClick={props.handleClose}>
+          x
+        </span>
+        {props.content}
       </div>
     </div>
   )
 }
+
+export default Popup
