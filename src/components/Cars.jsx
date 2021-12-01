@@ -11,10 +11,17 @@ export default function Cars() {
       setData(data)
     })
   }
+  const handleyear = () => {
+    axios
+      .get("http://localhost:2021/cars?_sort=Year&_order=asc")
+      .then(({ data }) => {
+        setData(data)
+      })
+  }
   return (
     <div>
       <h1>Hello</h1>
-      <button>Filter by year</button>
+      <button onClick={handleyear}>Filter by year</button>
       {data.map(res => (
         <div style={{ border: "1px solid black", width: "40%" }}>
           <h1>Name: {res.name}</h1>
