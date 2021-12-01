@@ -1,6 +1,7 @@
 import React from "react"
 import axios from "axios"
 import OrdersPage from "./OrdersPage"
+
 export default function Cars() {
   const [data, setData] = React.useState([])
   const [order, setOrders] = React.useState([])
@@ -40,7 +41,10 @@ export default function Cars() {
       <h1>Hello</h1>
       <button onClick={handleyear}>Filter by year</button>
       <button onClick={handlesort}>sort by Price</button>
-      <button onClick={handleData}>Show Orders</button>
+      <div>
+        <button onClick={handleData}>Show Orders</button>
+        <OrdersPage data={order}>Show order</OrdersPage>
+      </div>
 
       {data.map(res => (
         <div style={{ border: "1px solid black", width: "40%" }}>
